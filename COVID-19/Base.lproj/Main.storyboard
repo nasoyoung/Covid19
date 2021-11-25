@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumBarunpenR.ttf">
+            <string>NanumBarunpen</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="BYZ-38-t0r" customClass="HomeVC" customModule="COVID_19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-hW-dsM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="442.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Covid-19현황" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vh-M2-Zy9">
+                                        <rect key="frame" x="25" y="84" width="189" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="189" id="jRF-js-7Gs"/>
+                                            <constraint firstAttribute="height" constant="51" id="oxn-ee-NFx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재시간날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fM-CE-AY3">
+                                        <rect key="frame" x="25" y="155" width="325" height="19.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19.333333333333343" id="RkT-W6-BSh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.76470588235294112" green="0.39215686274509803" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8Vh-M2-Zy9" secondAttribute="trailing" constant="161" id="9iN-Si-PeI"/>
+                                    <constraint firstItem="1fM-CE-AY3" firstAttribute="leading" secondItem="cM9-hW-dsM" secondAttribute="leading" constant="25" id="HUO-Dl-anY"/>
+                                    <constraint firstAttribute="trailing" secondItem="1fM-CE-AY3" secondAttribute="trailing" constant="25" id="LuH-8v-tfH"/>
+                                    <constraint firstItem="8Vh-M2-Zy9" firstAttribute="leading" secondItem="cM9-hW-dsM" secondAttribute="leading" constant="25" id="pOM-OS-l3E"/>
+                                    <constraint firstItem="1fM-CE-AY3" firstAttribute="top" secondItem="8Vh-M2-Zy9" secondAttribute="bottom" constant="20" id="u3F-xV-TdM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAy-E9-yLE">
+                                <rect key="frame" x="25" y="194.33333333333334" width="325" height="321.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="SlX-k2-XYr">
+                                        <rect key="frame" x="0.0" y="5" width="325" height="305"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGX-v0-ZAn">
+                                                <rect key="frame" x="0.0" y="0.0" width="325" height="66.666666666666671"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 감염현황" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgi-i2-Lv9">
+                                                        <rect key="frame" x="20.999999999999993" y="17.333333333333314" width="103.33333333333331" height="32"/>
+                                                        <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Lgi-i2-Lv9" firstAttribute="centerY" secondItem="AGX-v0-ZAn" secondAttribute="centerY" id="9Wn-7d-hqH"/>
+                                                    <constraint firstItem="Lgi-i2-Lv9" firstAttribute="centerX" secondItem="AGX-v0-ZAn" secondAttribute="centerX" constant="-90" id="jW6-AG-S43"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Xj-OB-agk">
+                                                <rect key="frame" x="0.0" y="79.666666666666657" width="325" height="66.333333333333343"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="VZZ-vP-DMz">
+                                                        <rect key="frame" x="13.666666666666657" y="20.333333333333314" width="298" height="25.666666666666671"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="확진환자" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziE-DM-fdP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="25.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oo6-S4-arL">
+                                                                <rect key="frame" x="114" y="0.0" width="70" height="25.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="확진환자" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZB-8v-Avz">
+                                                                <rect key="frame" x="228" y="0.0" width="70" height="25.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="15"/>
+                                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="VZZ-vP-DMz" firstAttribute="centerX" secondItem="9Xj-OB-agk" secondAttribute="centerX" id="nKJ-kn-xtC"/>
+                                                    <constraint firstItem="VZZ-vP-DMz" firstAttribute="centerY" secondItem="9Xj-OB-agk" secondAttribute="centerY" id="nu5-1s-LDC"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBP-G7-aWU">
+                                                <rect key="frame" x="0.0" y="158.99999999999997" width="325" height="66.666666666666657"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="88H-fS-WF2">
+                                                        <rect key="frame" x="12.666666666666657" y="20.333333333333371" width="300" height="25.666666666666671"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="격리해제" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlj-uX-Jw4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="25.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT2-pQ-tQp">
+                                                                <rect key="frame" x="115" y="0.0" width="70" height="25.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="확진환자" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-8c-tzV">
+                                                                <rect key="frame" x="230" y="0.0" width="70" height="25.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="15"/>
+                                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="88H-fS-WF2" firstAttribute="centerX" secondItem="wBP-G7-aWU" secondAttribute="centerX" id="6qO-6T-WmS"/>
+                                                    <constraint firstItem="88H-fS-WF2" firstAttribute="centerY" secondItem="wBP-G7-aWU" secondAttribute="centerY" id="Ufp-uI-X1H"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BoC-7X-lim">
+                                                <rect key="frame" x="0.0" y="238.66666666666666" width="325" height="66.333333333333343"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="IfZ-Zf-rmg">
+                                                        <rect key="frame" x="13.666666666666657" y="20.333333333333314" width="298" height="25.666666666666671"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사망자수" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnA-rz-VaJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="25.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39y-hs-zvX">
+                                                                <rect key="frame" x="114" y="0.0" width="70" height="25.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="확진환자" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSc-rT-cyu">
+                                                                <rect key="frame" x="228" y="0.0" width="70" height="25.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="15"/>
+                                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="IfZ-Zf-rmg" firstAttribute="centerY" secondItem="BoC-7X-lim" secondAttribute="centerY" id="0Tv-b8-ZoU"/>
+                                                    <constraint firstItem="IfZ-Zf-rmg" firstAttribute="centerX" secondItem="BoC-7X-lim" secondAttribute="centerX" id="1Wr-ub-Rme"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="SlX-k2-XYr" firstAttribute="leading" secondItem="bAy-E9-yLE" secondAttribute="leading" id="3ba-Ts-rrD"/>
+                                    <constraint firstAttribute="bottom" secondItem="SlX-k2-XYr" secondAttribute="bottom" constant="11.33" id="EtG-KI-N7s"/>
+                                    <constraint firstItem="SlX-k2-XYr" firstAttribute="top" secondItem="bAy-E9-yLE" secondAttribute="top" constant="5" id="GkZ-Lp-1fn"/>
+                                    <constraint firstAttribute="trailing" secondItem="SlX-k2-XYr" secondAttribute="trailing" id="iAv-us-tW9"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maskimg" translatesAutoresizingMaskIntoConstraints="NO" id="geB-4e-Tob">
+                                <rect key="frame" x="86" y="625.66666666666663" width="203" height="152.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="geB-4e-Tob" secondAttribute="height" multiplier="4:3" id="Diq-Ib-fIY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zl-1g-eTm">
+                                <rect key="frame" x="70" y="544" width="235" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="NYz-Gh-z7b"/>
+                                    <constraint firstAttribute="height" constant="39" id="TC6-uq-r8k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="지역별 확진자수 확인하기">
+                                    <color key="titleColor" red="0.76470588240000004" green="0.3921568627" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToRegion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BaX-WP-in5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bAy-E9-yLE" firstAttribute="height" secondItem="cM9-hW-dsM" secondAttribute="height" multiplier="0.838855" constant="-50" id="45h-d9-aW6"/>
+                            <constraint firstItem="cM9-hW-dsM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="53o-C4-E5X"/>
+                            <constraint firstItem="8Vh-M2-Zy9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="8G5-a3-4OT"/>
+                            <constraint firstItem="bAy-E9-yLE" firstAttribute="width" secondItem="cM9-hW-dsM" secondAttribute="width" multiplier="0.866667" id="AMR-S4-HT2"/>
+                            <constraint firstItem="geB-4e-Tob" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EYp-mP-Gfy"/>
+                            <constraint firstItem="bAy-E9-yLE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="IPa-VF-GKw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="geB-4e-Tob" secondAttribute="trailing" constant="86" id="OTA-qc-bae"/>
+                            <constraint firstItem="0Zl-1g-eTm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Xdd-ha-fnf"/>
+                            <constraint firstItem="cM9-hW-dsM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cj5-en-IZT"/>
+                            <constraint firstItem="bAy-E9-yLE" firstAttribute="top" secondItem="1fM-CE-AY3" secondAttribute="bottom" constant="20" id="cwC-yv-epA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Zl-1g-eTm" secondAttribute="trailing" constant="70" id="dlG-TY-75v"/>
+                            <constraint firstItem="0Zl-1g-eTm" firstAttribute="top" secondItem="bAy-E9-yLE" secondAttribute="bottom" constant="28.333333333333371" id="fjj-ch-TZE"/>
+                            <constraint firstItem="cM9-hW-dsM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lGL-mc-b7q"/>
+                            <constraint firstItem="cM9-hW-dsM" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.545156" id="lIr-AF-6qh"/>
+                            <constraint firstItem="geB-4e-Tob" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="qfO-dI-Geb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0GI-88-Zx8"/>
+                    <connections>
+                        <outlet property="textView" destination="bAy-E9-yLE" id="QSW-jd-Pil"/>
+                        <outlet property="timeLabel" destination="1fM-CE-AY3" id="WrU-Ga-YtR"/>
+                        <outlet property="titleLabel" destination="8Vh-M2-Zy9" id="W6K-Sc-Kdm"/>
+                        <outlet property="todayCase" destination="lZB-8v-Avz" id="lDo-ZI-yhr"/>
+                        <outlet property="todayDt" destination="kSc-rT-cyu" id="KAm-Wq-IRj"/>
+                        <outlet property="todayRecovered" destination="mK9-8c-tzV" id="1R3-c0-JJZ"/>
+                        <outlet property="topView" destination="cM9-hW-dsM" id="OIe-ih-fLI"/>
+                        <outlet property="totalCase" destination="oo6-S4-arL" id="ybs-UG-eJ6"/>
+                        <outlet property="totalDeath" destination="39y-hs-zvX" id="fIF-td-qKi"/>
+                        <outlet property="totalRCCase" destination="kT2-pQ-tQp" id="zDU-j1-Ly8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080.8" y="75.369458128078819"/>
+        </scene>
+        <!--지역별 확진자-->
+        <scene sceneID="XvS-c3-N46">
+            <objects>
+                <viewController storyboardIdentifier="RegionVC" id="9vh-a8-VHz" customClass="RegionVC" customModule="COVID_19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gwn-qS-VQu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gfH-ta-OW3">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OMm-da-inQ">
+                                    <size key="itemSize" width="180" height="240"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="25" minY="25" maxX="25" maxY="25"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RegionCVC" id="fG2-iq-GG7" customClass="RegionCVC" customModule="COVID_19" customModuleProvider="target">
+                                        <rect key="frame" x="97.666666666666671" y="25" width="180" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pLW-Aa-V5x">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="240"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울 확진자 현황" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xg6-J7-qeB">
+                                                    <rect key="frame" x="15.666666666666671" y="104" width="148.66666666666663" height="32"/>
+                                                    <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xg6-J7-qeB" firstAttribute="centerY" secondItem="pLW-Aa-V5x" secondAttribute="centerY" id="9SM-ql-Mz3"/>
+                                                <constraint firstItem="Xg6-J7-qeB" firstAttribute="centerX" secondItem="pLW-Aa-V5x" secondAttribute="centerX" id="XP7-Gc-IBw"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="180" height="240"/>
+                                        <connections>
+                                            <outlet property="regionTitle" destination="Xg6-J7-qeB" id="vFI-vN-AtL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="9vh-a8-VHz" id="7oR-af-NgY"/>
+                                    <outlet property="delegate" destination="9vh-a8-VHz" id="Bqa-CD-hwK"/>
+                                </connections>
+                            </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Avd-4U-jMl">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" red="0.76470588240000004" green="0.3921568627" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <items>
+                                    <navigationItem title="지역별 확진자" id="yg8-RP-JQO">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="zVk-9b-Whl">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="goToHomeVC:" destination="9vh-a8-VHz" id="sUt-Qw-w0r"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Z2-Kv-IHK"/>
+                        <color key="backgroundColor" red="0.76470588240000004" green="0.3921568627" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Avd-4U-jMl" firstAttribute="trailing" secondItem="0Z2-Kv-IHK" secondAttribute="trailing" id="BTw-FE-Q3g"/>
+                            <constraint firstItem="gfH-ta-OW3" firstAttribute="top" secondItem="Avd-4U-jMl" secondAttribute="bottom" id="GOc-v4-zXD"/>
+                            <constraint firstItem="Avd-4U-jMl" firstAttribute="top" secondItem="0Z2-Kv-IHK" secondAttribute="top" id="gZa-Hl-ExE"/>
+                            <constraint firstItem="Avd-4U-jMl" firstAttribute="leading" secondItem="0Z2-Kv-IHK" secondAttribute="leading" id="kFn-A0-5VJ"/>
+                            <constraint firstItem="gfH-ta-OW3" firstAttribute="leading" secondItem="0Z2-Kv-IHK" secondAttribute="leading" id="ogU-ze-NLq"/>
+                            <constraint firstItem="gfH-ta-OW3" firstAttribute="trailing" secondItem="0Z2-Kv-IHK" secondAttribute="trailing" id="pFN-Wa-QgP"/>
+                            <constraint firstAttribute="bottom" secondItem="gfH-ta-OW3" secondAttribute="bottom" id="yDd-yb-HsP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="지역별 확진자" id="Lbv-pt-1A8">
+                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="kLf-9m-wND">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="customNavi" destination="Avd-4U-jMl" id="sKe-Cu-8vc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6iT-ax-62r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2158" y="75"/>
+        </scene>
+        <!--Pop UpVC-->
+        <scene sceneID="kyf-6z-RvI">
+            <objects>
+                <viewController storyboardIdentifier="PopUpVC" id="5Lx-rG-b1C" customClass="PopUpVC" customModule="COVID_19" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v3a-9o-Yke">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1L-R2-G9z">
+                                <rect key="frame" x="25" y="235" width="325" height="342"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="yxA-9t-c6C">
+                                        <rect key="frame" x="40" y="15" width="246" height="308"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRC-fe-7Zq">
+                                                <rect key="frame" x="0.0" y="0.0" width="246" height="56"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fi-TM-U5x">
+                                                        <rect key="frame" x="100.66666666666666" y="9" width="45" height="38.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="0fi-TM-U5x" firstAttribute="centerY" secondItem="xRC-fe-7Zq" secondAttribute="centerY" id="PnO-qy-WSg"/>
+                                                    <constraint firstItem="0fi-TM-U5x" firstAttribute="centerX" secondItem="xRC-fe-7Zq" secondAttribute="centerX" id="mKE-pS-cMW"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5v-iV-GIy">
+                                                <rect key="frame" x="0.0" y="63" width="246" height="56"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="n1d-Ma-6DK">
+                                                        <rect key="frame" x="38.666666666666671" y="15.333333333333314" width="168.66666666666663" height="25.666666666666671"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="누적확진자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uf-jZ-n5a">
+                                                                <rect key="frame" x="0.0" y="0.0" width="77.666666666666671" height="25.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plu-ta-RVh">
+                                                                <rect key="frame" x="132.66666666666669" y="0.0" width="36" height="25.666666666666668"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="bAQ-Ay-eA3"/>
+                                                                    <constraint firstAttribute="height" constant="25.666666666666668" id="mJQ-Bl-5Fj"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="8uf-jZ-n5a" firstAttribute="leading" secondItem="x5v-iV-GIy" secondAttribute="leading" constant="38.666666666666671" id="5cg-Zr-URB"/>
+                                                    <constraint firstItem="plu-ta-RVh" firstAttribute="top" secondItem="x5v-iV-GIy" secondAttribute="top" constant="15.333333333333314" id="IK3-rM-Liw"/>
+                                                    <constraint firstItem="8uf-jZ-n5a" firstAttribute="top" secondItem="x5v-iV-GIy" secondAttribute="top" constant="15.333333333333314" id="eqm-AD-Hd7"/>
+                                                    <constraint firstItem="8uf-jZ-n5a" firstAttribute="width" secondItem="x5v-iV-GIy" secondAttribute="width" multiplier="0.315718" id="tXn-7g-NhB"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFc-jl-gaE">
+                                                <rect key="frame" x="0.0" y="126" width="246" height="56"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="eWi-bA-nQd">
+                                                        <rect key="frame" x="38.666666666666671" y="15.333333333333314" width="168.66666666666663" height="25.666666666666671"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신규확진자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZd-6h-egg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="77.666666666666671" height="25.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfn-lK-3a2">
+                                                                <rect key="frame" x="132.66666666666669" y="0.0" width="36" height="25.666666666666668"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="YDI-jI-Dyc"/>
+                                                                    <constraint firstAttribute="height" constant="25.666666666666668" id="imD-6u-hiU"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
+                                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="hZd-6h-egg" firstAttribute="top" secondItem="IFc-jl-gaE" secondAttribute="top" constant="15.333333333333316" id="8WU-7W-RDO"/>
+                                                    <constraint firstItem="hZd-6h-egg" firstAttribute="width" secondItem="IFc-jl-gaE" secondAttribute="width" multiplier="0.315718" id="EOp-kW-p2y"/>
+                                                    <constraint firstItem="pfn-lK-3a2" firstAttribute="top" secondItem="IFc-jl-gaE" secondAttribute="top" constant="15.333333333333314" id="JY0-7i-pWQ"/>
+                                                    <constraint firstItem="hZd-6h-egg" firstAttribute="leading" secondItem="IFc-jl-gaE" secondAttribute="leading" constant="38.666666666666671" id="sVa-2C-fZm"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mkD-Ir-DJs">
+                                                <rect key="frame" x="0.0" y="189" width="246" height="56"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="격리해제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDg-Jn-ySn">
+                                                        <rect key="frame" x="38" y="16" width="62" height="25.666666666666671"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25.666666666666671" id="CDd-dN-rgZ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vI-R2-jti">
+                                                        <rect key="frame" x="172" y="16" width="36" height="25.666666666666671"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25.666666666666668" id="ZcA-RC-POL"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="lSE-xR-tZi"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="WDg-Jn-ySn" firstAttribute="leading" secondItem="mkD-Ir-DJs" secondAttribute="leading" constant="38" id="14J-m3-ltF"/>
+                                                    <constraint firstItem="WDg-Jn-ySn" firstAttribute="top" secondItem="mkD-Ir-DJs" secondAttribute="top" constant="16" id="RcD-gN-rIo"/>
+                                                    <constraint firstItem="WDg-Jn-ySn" firstAttribute="width" secondItem="mkD-Ir-DJs" secondAttribute="width" multiplier="0.252033" id="gvQ-QB-qLD"/>
+                                                    <constraint firstItem="4vI-R2-jti" firstAttribute="leading" secondItem="WDg-Jn-ySn" secondAttribute="trailing" constant="72" id="jCW-Hi-56k"/>
+                                                    <constraint firstItem="4vI-R2-jti" firstAttribute="top" secondItem="mkD-Ir-DJs" secondAttribute="top" constant="16" id="jyK-TH-MJ0"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2V-21-4uO">
+                                                <rect key="frame" x="0.0" y="252" width="246" height="56"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="wMm-dO-cut">
+                                                        <rect key="frame" x="38.666666666666671" y="15.333333333333371" width="168.66666666666663" height="25.666666666666671"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 사망자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2I-HL-6fZ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="25.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOA-JO-9EL">
+                                                                <rect key="frame" x="132.66666666666669" y="0.0" width="36" height="25.666666666666668"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="aD3-q3-gG2"/>
+                                                                    <constraint firstAttribute="height" constant="25.666666666666668" id="s8z-mF-qUU"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="NanumBarunpen" family="NanumBarunpen" pointSize="18"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="C2I-HL-6fZ" firstAttribute="leading" secondItem="w2V-21-4uO" secondAttribute="leading" constant="38.666666666666671" id="LMO-Jg-6gB"/>
+                                                    <constraint firstItem="xOA-JO-9EL" firstAttribute="top" secondItem="w2V-21-4uO" secondAttribute="top" constant="15.333333333333371" id="UM3-ba-pUB"/>
+                                                    <constraint firstItem="C2I-HL-6fZ" firstAttribute="top" secondItem="w2V-21-4uO" secondAttribute="top" constant="15.333333333333371" id="c4J-x6-ga6"/>
+                                                    <constraint firstItem="C2I-HL-6fZ" firstAttribute="width" secondItem="w2V-21-4uO" secondAttribute="width" multiplier="0.279133" id="epH-fB-bcu"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="yxA-9t-c6C" firstAttribute="leading" secondItem="I1L-R2-G9z" secondAttribute="leading" constant="40" id="0RH-SG-yzr"/>
+                                    <constraint firstAttribute="trailing" secondItem="yxA-9t-c6C" secondAttribute="trailing" constant="39" id="1nt-FZ-DjC"/>
+                                    <constraint firstItem="yxA-9t-c6C" firstAttribute="top" secondItem="I1L-R2-G9z" secondAttribute="top" constant="15" id="l3b-l7-Hh2"/>
+                                    <constraint firstAttribute="bottom" secondItem="yxA-9t-c6C" secondAttribute="bottom" constant="19" id="p5G-ft-UK3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSB-pM-VRy">
+                                <rect key="frame" x="324" y="206" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="RlX-jd-YyE"/>
+                                    <constraint firstAttribute="height" constant="26" id="SvT-ft-IsZ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToBack:" destination="5Lx-rG-b1C" eventType="touchUpInside" id="gOa-EF-4P1"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maskimg1" translatesAutoresizingMaskIntoConstraints="NO" id="JiN-Bs-kxB">
+                                <rect key="frame" x="148" y="140" width="80" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="1c6-iE-5pa"/>
+                                    <constraint firstAttribute="width" constant="80" id="fbs-Eu-maj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="glo-Nx-HIu"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="glo-Nx-HIu" firstAttribute="trailing" secondItem="lSB-pM-VRy" secondAttribute="trailing" constant="25" id="GDs-Jx-hx6"/>
+                            <constraint firstItem="I1L-R2-G9z" firstAttribute="centerY" secondItem="v3a-9o-Yke" secondAttribute="centerY" id="GvK-bR-AL4"/>
+                            <constraint firstItem="glo-Nx-HIu" firstAttribute="trailing" secondItem="JiN-Bs-kxB" secondAttribute="trailing" constant="147" id="MqP-G1-nGM"/>
+                            <constraint firstItem="JiN-Bs-kxB" firstAttribute="leading" secondItem="glo-Nx-HIu" secondAttribute="leading" constant="148" id="XsH-XR-4DN"/>
+                            <constraint firstItem="I1L-R2-G9z" firstAttribute="top" secondItem="lSB-pM-VRy" secondAttribute="bottom" constant="3" id="caz-cI-zRD"/>
+                            <constraint firstItem="I1L-R2-G9z" firstAttribute="centerX" secondItem="v3a-9o-Yke" secondAttribute="centerX" id="ob7-ii-WEz"/>
+                            <constraint firstItem="I1L-R2-G9z" firstAttribute="height" secondItem="v3a-9o-Yke" secondAttribute="height" multiplier="0.421182" id="v2K-Dm-HdG"/>
+                            <constraint firstItem="I1L-R2-G9z" firstAttribute="top" secondItem="JiN-Bs-kxB" secondAttribute="bottom" constant="-2" id="y01-bZ-Qt1"/>
+                            <constraint firstItem="I1L-R2-G9z" firstAttribute="width" secondItem="v3a-9o-Yke" secondAttribute="width" multiplier="0.866667" id="yjG-h0-AzG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="death" destination="xOA-JO-9EL" id="clq-UB-tbm"/>
+                        <outlet property="newCase" destination="pfn-lK-3a2" id="eO4-De-U98"/>
+                        <outlet property="popView" destination="I1L-R2-G9z" id="IQF-uv-0eT"/>
+                        <outlet property="recovered" destination="4vI-R2-jti" id="Bm3-8w-yAG"/>
+                        <outlet property="region" destination="0fi-TM-U5x" id="GBi-W0-Nzo"/>
+                        <outlet property="totalCase" destination="plu-ta-RVh" id="Xwe-ec-uEu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2nZ-pA-7h4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3124" y="75.369458128078819"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="maskimg" width="394" height="300"/>
+        <image name="maskimg1" width="186" height="217"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
